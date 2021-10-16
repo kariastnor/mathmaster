@@ -70,3 +70,8 @@ input {
     margin-left: 15px;
     margin-top: 15px;
 }
+
+.score {
+    color: #161D6F;
+    font-weight: 700;
+}

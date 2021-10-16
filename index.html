@@ -16,17 +16,18 @@
     <div class="container">
       <h1>Math master</h1>
       <h3>Choose a category to start practicing</h3>
-      <button type="button" class="operator-btn">Add</button>
-      <button type="button" class="operator-btn">Subtract</button>
-      <button type="button" class="operator-btn">Multiply</button>
-      <button type="button" class="operator-btn">Divide</button>
+      <button type="button" class="operator-btn" title="Keyboard shortcut: a">Add</button>
+      <button type="button" class="operator-btn" title="Keyboard shortcut: s">Subtract</button>
+      <button type="button" class="operator-btn" title="Keyboard shortcut: m">Multiply</button>
+      <button type="button" class="operator-btn" title="Keyboard shortcut: d">Divide</button>
 
       <div class="calc">
         <h2 class="hidden">Waiting for calculation...</h2>
         <label for="answer">Your answer:</label>
         <input type="number" step="1" name="answer" id="answer">
-        <button type="button" class="answer-btn">Check answer</button>
-        <h4 class="hidden">Checking answer...</h4>
+        <button type="button" class="answer-btn" title="Keyboard shortcut: Enter">Check answer</button>
+        <h4 class="hidden check">Checking answer...</h4>
+        <h4 class="hidden score">Checking score...</h4>
       </div>
     </div>
 
