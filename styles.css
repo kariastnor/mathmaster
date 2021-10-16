@@ -20,12 +20,12 @@ h2, h3 {
 
 h2 {
     font-size: 3rem;
-    margin: 20px 0 50px;
+    margin: 60px 0 50px;
 }
 
 h3 {
     font-size: 2rem;
-    margin-top: 0;
+    margin-top: 50px;
 }
 
 h4 {
@@ -62,7 +62,7 @@ input {
 }
 
 .operator-btn {
-    margin: 50px 10px;
+    margin: 10px 10px;
     width: 100px;
 }
 
