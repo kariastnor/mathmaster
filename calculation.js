@@ -1,4 +1,3 @@
-
 // First create variables to store the correct answer and the player's answer.
 // Also create a variable for the mathematical operation. This will be used to track what operation is being used,
 // and so that we can also trigger the last operation function automatically on a correct answer.
@@ -10,15 +9,20 @@ var operation = "";
 // Get the first letter from the button text and make it lower case, so that we can later use one switch statement for both
 // clicks and keyboard shortcuts.
 $(".operator-btn").click(function () {
-  operation = $(this).text().toLowerCase().slice(0,1);
+  operation = $(this).text().toLowerCase().slice(0, 1);
   calculator(operation);
 });
 
 // Trigger calculator function when a, s, m or d keys are pressed.
 $(document).keydown(function (event) {
-  if (event.key === "a" || event.key === "s" || event.key === "m" || event.key === "d") {
-  operation = event.key;
-  calculator(operation);
+  if (
+    event.key === "a" ||
+    event.key === "s" ||
+    event.key === "m" ||
+    event.key === "d"
+  ) {
+    operation = event.key;
+    calculator(operation);
   }
 });
 
@@ -56,7 +60,7 @@ function add() {
     .removeClass("hidden");
 }
 
-// Function for subtract operation. Generate two random numbers between 1 and 200, 
+// Function for subtract operation. Generate two random numbers between 1 and 200,
 // where the second number is always smaller, or the same, as the first number.
 // Remove the "hidden" class from h2 heading to show the calculation.
 function subtract() {
@@ -92,14 +96,14 @@ function divide() {
     .removeClass("hidden");
 }
 
-// When the "Check answer" button is clicked, store the player's answer in the yourAnswer variable and 
+// When the "Check answer" button is clicked, store the player's answer in the yourAnswer variable and
 // trigger the checkAnswer function.
 $(".answer-btn").on("click", function () {
   yourAnswer = parseInt($("#answer").val());
   checkAnswer();
 });
 
-// When the Enter key is pressed, store the player's answer in the yourAnswer variable and 
+// When the Enter key is pressed, store the player's answer in the yourAnswer variable and
 // trigger the checkAnswer function.
 $(document).keydown(function (event) {
   if (event.key === "Enter") {
@@ -139,7 +143,7 @@ function checkAnswer() {
     $("h4.score")
       .text("+10 points. Your score is now " + score + ".")
       .removeClass("hidden");
-    setTimeout(function() {
+    setTimeout(function () {
       calculator(operation);
     }, 1500);
   } else {
